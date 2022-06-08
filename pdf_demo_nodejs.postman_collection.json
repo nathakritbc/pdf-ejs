@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "97a6f10b-2fc4-459e-96ab-382cf712fda5",
+		"name": "pdf_demo_nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21024510"
+	},
+	"item": [
+		{
+			"name": "testServer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9098/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9098",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testPostPDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rows\":[\r\n        {\"id\":1,\"first_name\":\"a\",\"last_name\":\"aa\"},\r\n        {\"id\":2,\"first_name\":\"b\",\"last_name\":\"ba\"},\r\n        {\"id\":3,\"first_name\":\"n\",\"last_name\":\"nma\"}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPDF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rows\":[\r\n        {\"id\":1,\"first_name\":\"a\",\"last_name\":\"aa\"},\r\n        {\"id\":2,\"first_name\":\"b\",\"last_name\":\"ba\"},\r\n        {\"id\":3,\"first_name\":\"n\",\"last_name\":\"nma\"}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9898/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9898",
+					"path": [
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
