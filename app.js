@@ -6,6 +6,8 @@ const logger = require("morgan");
 const htmlToPdf = require("html-pdf-node");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
+const certdfRouter = require("./routes/cert_pdf.routes");
+
 const ejs = require("ejs");
 const cors = require("cors");
 
@@ -23,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/certPdf", certdfRouter);
 
 app.get("/pdf", async function (req, res) {
   const rows = [

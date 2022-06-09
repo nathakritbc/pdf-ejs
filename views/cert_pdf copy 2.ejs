@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title></title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+      .header {
+        display: block;
+      }
+      @media print {
+        /* @page {
+          size: auto;
+          margin: 10mm 10mm 10mm 10mm;
+          /* margin: 2.5cm; */
+        body {
+          font-size: 16px;
+          font-family: sans-serif;
+        }
+        /* .header {
+          display: none;
+        } */
+
+        .sub-conten {
+          position: relative;
+          top: 310px;
+        }
+
+        .pdf-image {
+          object-fit: fill;
+        }
+      }
+
+      .pdf-image {
+        margin-bottom: 50px;
+      }
+
+      .sub-conten {
+        position: relative;
+        top: 310px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- <img src="./images/cert.png" alt="" srcset="" /> -->
+
+      <h1 class="sub-conten text-center">name lastName</h1>
+      <img
+        src="./images/cert.png"
+        class="rounded mx-auto d-block pdf-image"
+        width="900"
+      />
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            message: "Hello Vue!",
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
